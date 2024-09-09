@@ -43,7 +43,6 @@ namespace FtpExample.Services
                 throw;
             }
         }
-
         public async Task UploadFileAsync(IFormFile file, string directory)
         {
             var tempFilePath = Path.GetTempFileName();
