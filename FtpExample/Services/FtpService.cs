@@ -5,6 +5,7 @@ namespace FtpExample.Services
 {
     public class FtpService
     {
+        
         private readonly string _userName = string.Empty;
         private readonly string _password = string.Empty;
         private readonly AsyncFtpClient _ftp;
@@ -12,11 +13,11 @@ namespace FtpExample.Services
 
         public FtpService(ILogger<FtpService> logger)
         {
-            _userName = string.Empty;
-            _password = string.Empty;
+            _userName = "nkminipos-api";
+            _password = "nkminipos@123";
             _ftp = new AsyncFtpClient
             {
-                Host = string.Empty,
+                Host = "https://win8135.site4now.net",
                 Credentials = new NetworkCredential(_userName, _password)
 
             };
