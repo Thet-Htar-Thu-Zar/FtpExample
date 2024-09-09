@@ -4,8 +4,7 @@ using System.Net;
 namespace FtpExample.Services
 {
     public class FtpService
-    {
-        
+    {       
         private readonly string _userName = string.Empty;
         private readonly string _password = string.Empty;
         private readonly AsyncFtpClient _ftp;
