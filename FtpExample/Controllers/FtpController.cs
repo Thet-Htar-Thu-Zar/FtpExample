@@ -29,7 +29,6 @@ namespace FtpExample.Controllers
             }
         }
 
-
         [HttpPost("UploadFile")]
         public async Task<IActionResult> UploadFile([FromForm] FtpRequestModel requestModel)
         {
