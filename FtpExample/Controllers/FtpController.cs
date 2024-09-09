@@ -8,7 +8,6 @@ namespace FtpExample.Controllers
     [ApiController]
     public class FtpController : ControllerBase
     {
-
         private readonly FtpService _ftpService;
 
         public FtpController(FtpService ftpService)
