@@ -42,6 +42,5 @@ namespace FtpExample.Controllers
                 throw new Exception(ex.Message);
             }
         }
-
     }
 }
