@@ -1,0 +1,26 @@
+﻿using FtpExample.Services;
+using Microsoft.AspNetCore.Mvc;
+
+namespace FtpExample.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class FtpController : ControllerBase
+    {
+
+        private readonly FtpService _ftpService;
+
+        public FtpController(FtpService ftpService)
+        {
+            _ftpService = ftpService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> CheckFtpDirector(string directoryName)
+        {
+            bool isExist = await _ftpService.CheckDirectoryExistsAsync(directoryName);
+            return Ok(isExist);
+        }
+
+    }
+}
