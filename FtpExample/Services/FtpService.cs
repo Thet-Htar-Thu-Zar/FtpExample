@@ -86,7 +86,6 @@ namespace FtpExample.Services
                     _logger.LogInformation("Temporary file deleted.");
                 }
             }
-
         }
     }
 }
