@@ -17,7 +17,7 @@ namespace FtpExample.Services
             _password = "nkminipos@123";
             _ftp = new AsyncFtpClient
             {
-                Host = "https://win8135.site4now.net",
+                Host = "win8135.site4now.net",
                 Credentials = new NetworkCredential(_userName, _password)
 
             };
@@ -40,25 +40,6 @@ namespace FtpExample.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.ToString());
-                throw;
-            }
-        }
-
-        public async Task<bool> CreateDirectoryAsync(string directory)
-        {
-            try
-            {
-                var token = new CancellationToken();
-                await _ftp.Connect(token);
-                return await _ftp.CreateDirectory(directory, true, token);
-            }
-            catch (Exception ex)
-            {
-                if (ex.InnerException != null)
-                {
-                    Console.WriteLine(ex.InnerException);
-                }
                 Console.WriteLine(ex.ToString());
                 throw;
             }

@@ -1,8 +1,11 @@
-﻿namespace FtpExample.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FtpExample.Models
 {
     public class FtpRequestModel
     {
-        public IFormFile File { get; set; }
-        public string DirectoryName { get; set; }
+      
+        public required IFormFile File { get; set; }
+        public required string DirectoryName { get; set; }
     }
 }
