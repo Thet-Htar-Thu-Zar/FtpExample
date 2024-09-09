@@ -9,7 +9,6 @@ namespace FtpExample.Controllers
     public class FtpController : ControllerBase
     {
         private readonly FtpService _ftpService;
-
         public FtpController(FtpService ftpService)
         {
             _ftpService = ftpService;
