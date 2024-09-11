@@ -29,6 +29,20 @@ namespace FtpExample.Controllers
             }
         }
 
+        [HttpPost("CreateDirectory")]
+        public async Task<IActionResult> CreateDirectory(string directory)
+        {
+            try
+            {
+                bool isCreateSuccessful = await _ftpService.CreateDirectoryAsync(directory);
+                return Ok(isCreateSuccessful);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
         [HttpPost("UploadFile")]
         public async Task<IActionResult> UploadFile([FromForm] FtpRequestModel requestModel)
         {
